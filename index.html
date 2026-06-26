@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrivoDev | AI-Powered Digital Marketing Agency</title>
+  <meta name="description" content="KrivoDev helps businesses scale using AI-powered SEO, premium Website Development, Performance Ads, and workflow automation. Get a free digital audit today.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glowing Elements -->
+  <div class="bg-glow-container">
+    <div class="bg-glow-blob blob-primary"></div>
+    <div class="bg-glow-blob blob-secondary"></div>
+  </div>
+
+  <!-- 1. Sticky Navigation -->
+  <header id="header">
+    <div class="navbar">
+      <a href="#" class="logo">
+        <span>KrivoDev</span><span class="logo-dot"></span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li class="nav-cta">
+          <button class="btn btn-primary btn-sm open-modal-btn">Get Free Audit</button>
+        </li>
+      </ul>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span></span> Next-Gen Marketing
+        </div>
+        <h1 class="hero-title">
+          Grow Faster with <span class="gradient-text">AI-Powered</span> Digital Marketing
+        </h1>
+        <p class="hero-desc">
+          We help businesses generate more traffic, leads, and revenue through SEO, Website Development, AI Automation, and Performance Marketing.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary open-modal-btn">Get Free Website Audit</button>
+          <a href="#services" class="btn btn-secondary">View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">10x</span>
+            <span class="stat-label">Growth Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">99%</span>
+            <span class="stat-label">Client Trust</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">$45M<span>+</span></span>
+            <span class="stat-label">Revenue Generated</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-illustration-wrapper reveal delay-200">
+        <div class="hero-img-container">
+          <img src="assets/hero_illustration.png" alt="Futuristic 3D growth graph illustration representing AI analytics and marketing data dashboards" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Trusted By Section -->
+  <section id="trusted" class="trusted">
+    <div class="container">
+      <h2 class="trusted-title">TRUSTED BY INNOVATIVE BRANDS WORLDWIDE</h2>
+      <div class="logo-slider">
+        <div class="logo-track">
+          <!-- Logo 1: Quantum -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">QUANTUM</text>
+            <circle cx="20" cy="15" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="20" cy="15" r="3" fill="currentColor"/>
+          </svg>
+          <!-- Logo 2: Vertex -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">VERTEX</text>
+            <path d="M12 22 L20 8 L28 22 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <!-- Logo 3: TechFlow -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">TECHFLOW</text>
+            <path d="M12 15 C12 10, 28 10, 28 15 C28 20, 12 20, 12 15 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 15 C16 12, 24 12, 24 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <!-- Logo 4: Helix -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">HELIX</text>
+            <path d="M12 8 C12 8, 20 22, 20 22 C20 22, 28 8, 28 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M12 22 C12 22, 20 8, 20 8 C20 8, 28 22, 28 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <!-- Logo 5: Apex -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">APEX</text>
+            <path d="M15 8 L25 8 L20 22 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          
+          <!-- Duplicate Logos for Seamless Infinite Scroll -->
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">QUANTUM</text>
+            <circle cx="20" cy="15" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="20" cy="15" r="3" fill="currentColor"/>
+          </svg>
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">VERTEX</text>
+            <path d="M12 22 L20 8 L28 22 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">TECHFLOW</text>
+            <path d="M12 15 C12 10, 28 10, 28 15 C28 20, 12 20, 12 15 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 15 C16 12, 24 12, 24 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">HELIX</text>
+            <path d="M12 8 C12 8, 20 22, 20 22 C20 22, 28 8, 28 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M12 22 C12 22, 20 8, 20 8 C20 8, 28 22, 28 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.5px">APEX</text>
+            <path d="M15 8 L25 8 L20 22 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">AI-Driven Services Built for High Performance</h2>
+        <p class="section-desc">We leverage cutting-edge tech and growth strategies to position your business ahead of the competition.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1: SEO -->
+        <div class="glass-card service-card reveal">
+          <div class="service-icon">
+            <i data-lucide="search"></i>
+          </div>
+          <h3 class="service-card-title">SEO Optimization</h3>
+          <p class="service-card-desc">Dominate search rankings, drive organic high-converting traffic, and secure long-term digital authority.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+        
+        <!-- Service 2: Local SEO -->
+        <div class="glass-card service-card reveal delay-100">
+          <div class="service-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <h3 class="service-card-title">Local SEO</h3>
+          <p class="service-card-desc">Put your business on the map. Drive local foot traffic and leads by optimizing Google Business Profiles.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+        
+        <!-- Service 3: Web Dev -->
+        <div class="glass-card service-card reveal delay-200">
+          <div class="service-icon">
+            <i data-lucide="code"></i>
+          </div>
+          <h3 class="service-card-title">Website Development</h3>
+          <p class="service-card-desc">Sleek, lightning-fast, conversion-optimized custom websites built with clean code and premium UI design.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+        
+        <!-- Service 4: Google Ads -->
+        <div class="glass-card service-card reveal">
+          <div class="service-icon">
+            <i data-lucide="trending-up"></i>
+          </div>
+          <h3 class="service-card-title">Google Ads (PPC)</h3>
+          <p class="service-card-desc">High-ROI pay-per-click advertising targeting users actively searching for your products and services.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+        
+        <!-- Service 5: SMM -->
+        <div class="glass-card service-card reveal delay-100">
+          <div class="service-icon">
+            <i data-lucide="share-2"></i>
+          </div>
+          <h3 class="service-card-title">Social Media Marketing</h3>
+          <p class="service-card-desc">Grow brand loyalty, reach viral audiences, and manage your social channels with analytics-driven campaigns.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+        
+        <!-- Service 6: AI Automation -->
+        <div class="glass-card service-card reveal delay-200">
+          <div class="service-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3 class="service-card-title">AI Automation</h3>
+          <p class="service-card-desc">Integrate smart AI pipelines, automated customer workflows, and LLM-powered chatbots into your stack.</p>
+          <a href="#contact" class="service-link">Learn More <i data-lucide="arrow-right" size="16"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose KrivoDev -->
+  <section id="why-us" class="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Engineered for Rapid Business Scaling</h2>
+        <p class="section-desc">We don't guess. We combine strict data analysis with AI automations to guarantee measurable agency results.</p>
+      </div>
+      
+      <div class="why-grid">
+        <!-- Feature 1: AI Powered -->
+        <div class="glass-card feature-card reveal">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="zap"></i>
+            </div>
+            <h3 class="feature-title">AI Powered</h3>
+          </div>
+          <p class="feature-desc">We use custom machine learning modules to find high-value keyword clusters, write code, and analyze target markets.</p>
+        </div>
+        
+        <!-- Feature 2: ROI Focused -->
+        <div class="glass-card feature-card reveal delay-100">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="dollar-sign"></i>
+            </div>
+            <h3 class="feature-title">ROI Focused</h3>
+          </div>
+          <p class="feature-desc">Your success is our single north star. Every penny spent is optimized to yield maximum leads and sales conversion.</p>
+        </div>
+        
+        <!-- Feature 3: Fast Delivery -->
+        <div class="glass-card feature-card reveal delay-200">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="clock"></i>
+            </div>
+            <h3 class="feature-title">Fast Delivery</h3>
+          </div>
+          <p class="feature-desc">Leveraging modern automated pipelines allows us to deliver high-quality code and strategies in record execution time.</p>
+        </div>
+        
+        <!-- Feature 4: Transparent Process -->
+        <div class="glass-card feature-card reveal">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3 class="feature-title">Transparent Process</h3>
+          </div>
+          <p class="feature-desc">No secrets, no hidden clauses. You get real-time client dashboards tracking traffic, leads, and conversion metrics.</p>
+        </div>
+        
+        <!-- Feature 5: Modern Strategy -->
+        <div class="glass-card feature-card reveal delay-100">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="feature-title">Modern Strategy</h3>
+          </div>
+          <p class="feature-desc">No generic playbooks. We build custom campaigns targeting modern buyer behaviours, AI searches, and voice queries.</p>
+        </div>
+        
+        <!-- Feature 6: Business Growth -->
+        <div class="glass-card feature-card reveal delay-200">
+          <div class="feature-header">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="pie-chart"></i>
+            </div>
+            <h3 class="feature-title">Business Growth</h3>
+          </div>
+          <p class="feature-desc">We build systems that scale with you, allowing your backend marketing to handle exponential client growth seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Process Section -->
+  <section id="process" class="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Process</span>
+        <h2 class="section-title">The Roadmap to Market Dominance</h2>
+        <p class="section-desc">Our streamlined 4-step framework ensures zero waste, maximum speed, and compounding growth.</p>
+      </div>
+      
+      <div class="process-stepper">
+        <!-- Step 1 -->
+        <div class="step-card reveal">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Research</h3>
+          <p class="step-desc">We audit your digital footprint, analyze competitors, and leverage AI to uncover hidden audience pools.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step-card reveal delay-100">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Strategy</h3>
+          <p class="step-desc">We draft a custom roadmap detailing content, ad campaigns, design modules, and automation metrics.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step-card reveal delay-200">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Execution</h3>
+          <p class="step-desc">Our developers and marketers ship high-speed landing pages and scale profitable marketing pipelines.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="step-card reveal delay-300">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Growth</h3>
+          <p class="step-desc">We track data dashboards in real-time, optimizing funnels to lower cost-per-lead and compound your ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Portfolio Preview -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Our Digital Success Stories</h2>
+        <p class="section-desc">Explore projects where code, design, and growth marketing combined to scale client revenue.</p>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="glass-card portfolio-card reveal">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-1.png" alt="SaaS Analytics Hub interface showing graphs and metrics" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Web Development</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">SaaS</span>
+              <span class="portfolio-tag">React</span>
+            </div>
+            <h3 class="portfolio-title">SaaS Analytics Platform</h3>
+            <p class="portfolio-desc">We designed and developed a high-fidelity analytics platform that boosted signup conversion rates by 42%.</p>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="glass-card portfolio-card reveal delay-100">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-2.png" alt="Apex E-commerce platform checkout design layout" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">SEO & Marketing</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">E-Commerce</span>
+              <span class="portfolio-tag">SEO</span>
+            </div>
+            <h3 class="portfolio-title">Apex E-Commerce Engine</h3>
+            <p class="portfolio-desc">A complete SEO audit and overhaul that generated a 320% increase in organic local google search visibility.</p>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="glass-card portfolio-card reveal delay-200">
+          <div class="portfolio-image">
+            <img src="assets/portfolio-3.png" alt="AI marketing automation flow setup" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">AI Integration</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Automation</span>
+              <span class="portfolio-tag">AI</span>
+            </div>
+            <h3 class="portfolio-title">AI Marketing Automation</h3>
+            <p class="portfolio-desc">Built a custom customer flow builder that cut support overhead by 50% using integrated LLMs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Founders Say About Us</h2>
+        <p class="section-desc">Read feedback from business owners and SaaS founders who partner with KrivoDev.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="glass-card testimonial-card reveal">
+          <div class="testimonial-stars">
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+          </div>
+          <p class="testimonial-quote">
+            KrivoDev doubled our organic leads within 3 months. Their custom AI integrations save us hours of manual outreach. Very professional!
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah Jenkins" class="author-img" loading="lazy">
+            <div>
+              <h4 class="author-name">Sarah Jenkins</h4>
+              <p class="author-role">CEO, FinTech Solutions</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="glass-card testimonial-card reveal delay-100">
+          <div class="testimonial-stars">
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+          </div>
+          <p class="testimonial-quote">
+            The website they built is incredibly fast, visually stunning, and converts mobile traffic like crazy. We've seen a massive surge in sales.
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Marcus Chen" class="author-img" loading="lazy">
+            <div>
+              <h4 class="author-name">Marcus Chen</h4>
+              <p class="author-role">Founder, Helix Retail</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="glass-card testimonial-card reveal delay-200">
+          <div class="testimonial-stars">
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+            <i data-lucide="star" fill="currentColor"></i>
+          </div>
+          <p class="testimonial-quote">
+            Unbelievable experience. They mapped and automated our entire customer onboarding pipeline. High attention to detail and clear data tracking.
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&h=100&q=80" alt="Elena Rostova" class="author-img" loading="lazy">
+            <div>
+              <h4 class="author-name">Elena Rostova</h4>
+              <p class="author-role">Ops Director, SaaSify</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Get quick answers to common questions about our capabilities and how we deliver growth.</p>
+      </div>
+      
+      <div class="faq-wrapper reveal">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>What core services does KrivoDev offer?</span>
+            <span class="faq-icon-box"><i data-lucide="chevron-down" size="18"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              We specialize in SEO, local maps optimization, custom high-performance web development, pay-per-click Google Search campaigns, data-driven Social Media Marketing, and custom business AI/workflow automations.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>How does KrivoDev leverage AI in digital marketing?</span>
+            <span class="faq-icon-box"><i data-lucide="chevron-down" size="18"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              We use advanced AI algorithms to conduct deep competitor audits, analyze massive keyword databases, optimize bidding schedules, track consumer intent shifts, and build custom automated user onboarding and support systems.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>How long does it take to see results from SEO?</span>
+            <span class="faq-icon-box"><i data-lucide="chevron-down" size="18"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Typically, initial rank movements and traffic increases are visible within 60 to 90 days. Compounding organic traffic gains and structural domain authority improvements peak between 6 to 12 months.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Do you build custom web applications?</span>
+            <span class="faq-icon-box"><i data-lucide="chevron-down" size="18"></i></span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Yes, our dev division designs and develops bespoke web applications, SaaS MVPs, custom Shopify themes, React setups, and Webflow corporate marketing sites, focusing strictly on speed and SEO optimization.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Final CTA -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="glass-card cta-banner reveal">
+        <h2 class="cta-banner-title">Ready to Dominate Your Industry?</h2>
+        <p class="cta-banner-desc">Book your 100% free digital audit today. We'll outline critical SEO leaks, page-speed issues, and automation gaps.</p>
+        <button class="btn btn-primary open-modal-btn">Book Free Audit <i data-lucide="calendar"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="#" class="logo">
+          <span>KrivoDev</span><span class="logo-dot"></span>
+        </a>
+        <p class="footer-desc">
+          Accelerating business growth through cutting-edge design, data-driven marketing, and modern AI automation pipelines.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter" size="18"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" size="18"></i></a>
+          <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github" size="18"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram" size="18"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Services</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#services">SEO Optimization</a></li>
+          <li class="footer-link"><a href="#services">Local SEO Optimization</a></li>
+          <li class="footer-link"><a href="#services">Website Development</a></li>
+          <li class="footer-link"><a href="#services">Google Ads (PPC)</a></li>
+          <li class="footer-link"><a href="#services">AI Workflow Automation</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#hero">Home</a></li>
+          <li class="footer-link"><a href="#why-us">Why Choose Us</a></li>
+          <li class="footer-link"><a href="#process">Our Process</a></li>
+          <li class="footer-link"><a href="#portfolio">Case Studies</a></li>
+          <li class="footer-link"><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-newsletter">
+        <h4 class="footer-col-title">Stay Updated</h4>
+        <p class="footer-newsletter-text text-gray">Subscribe to receive monthly AI marketing tips and tech updates.</p>
+        <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email address for newsletter">
+          <button class="newsletter-btn" type="submit" aria-label="Submit newsletter subscription"><i data-lucide="arrow-right" size="18"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 KrivoDev. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Audit Modal Popup -->
+  <div class="modal-overlay" id="audit-modal">
+    <div class="glass-card modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal"><i data-lucide="x" size="18"></i></button>
+      <h3 class="modal-title gradient-text">Get Your Free Digital Audit</h3>
+      <p class="modal-desc">Fill in the fields below. Our specialists will review your website and send you a video report highlighting improvements.</p>
+      
+      <form id="audit-form">
+        <div class="form-group">
+          <label for="audit-name" class="form-label">Full Name</label>
+          <input type="text" id="audit-name" class="form-input" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="audit-email" class="form-label">Work Email</label>
+          <input type="email" id="audit-email" class="form-input" placeholder="john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="audit-website" class="form-label">Website URL</label>
+          <input type="url" id="audit-website" class="form-input" placeholder="https://company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="audit-service" class="form-label">Primary Goal</label>
+          <select id="audit-service" class="form-input form-select" required>
+            <option value="" disabled selected>Select a goal...</option>
+            <option value="seo">Increase Google Traffic (SEO)</option>
+            <option value="webdev">Rebuild Website Design</option>
+            <option value="automation">Automate Operations using AI</option>
+            <option value="ads">Launch Performance Ads</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">Request Free Audit Report</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="main.js"></script>
+</body>
+</html>
