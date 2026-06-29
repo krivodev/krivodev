@@ -4,17 +4,35 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // --- Sticky Navigation header ---
+  // --- Sticky Navigation Header & Back-To-Top Toggle ---
   const header = document.getElementById('header');
+  const backToTopBtn = document.getElementById('back-to-top');
+
   window.addEventListener('scroll', () => {
+    // Header Sticky Glass Transition
     if (window.scrollY > 20) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
+
+    // Back to Top Button Visibility
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add('active');
+    } else {
+      backToTopBtn.classList.remove('active');
+    }
   });
 
-  // --- Mobile Navigation Menu ---
+  // Back to Top Action
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // --- Mobile Navigation Menu Toggle ---
   const mobileToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -48,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Intersection Observer for Active Nav Link Tracking ---
+  // --- Intersection Observer for Active Nav Link Highlight ---
   const sections = document.querySelectorAll('section');
   
   const navObserverOptions = {
     root: null,
-    rootMargin: '-30% 0px -60% 0px', // Trigger when section occupies the sweet spot of viewport
+    rootMargin: '-30% 0px -60% 0px', // Trigger active state when section enters sweet spot
     threshold: 0
   };
 
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('reveal-active');
-        revealObserver.unobserve(entry.target); // Trigger once
+        revealObserver.unobserve(entry.target); // Trigger animation once
       }
     });
   }, revealObserverOptions);
@@ -97,7 +115,51 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(element);
   });
 
-  // --- FAQ Accordions ---
+  // --- Dynamic Timeline Progress Filler ---
+  const timelineContainer = document.querySelector('.timeline-container');
+  const progressFill = document.getElementById('timeline-progress-fill');
+  const stepItems = document.querySelectorAll('.timeline-step-item');
+
+  function updateTimeline() {
+    if (!timelineContainer) return;
+    const rect = timelineContainer.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate how much of the timeline has been scrolled past
+    const containerHeight = rect.height;
+    const scrollStart = viewportHeight * 0.75; // Start filling when timeline enters 75% height
+    const scrolledAmount = scrollStart - rect.top;
+    
+    let percent = Math.min(Math.max((scrolledAmount / containerHeight) * 100, 0), 100);
+    
+    // Check orientation matches responsive design
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
+      progressFill.style.height = `${percent}%`;
+      progressFill.style.width = '100%';
+    } else {
+      progressFill.style.width = `${percent}%`;
+      progressFill.style.height = '100%';
+    }
+
+    // Activate/deactivate individual steps as they cross 60% viewport height
+    stepItems.forEach(item => {
+      const node = item.querySelector('.timeline-node');
+      const nodeRect = node.getBoundingClientRect();
+      if (nodeRect.top + nodeRect.height / 2 < viewportHeight * 0.6) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+
+  // Bind scrolling timelines
+  window.addEventListener('scroll', updateTimeline);
+  window.addEventListener('resize', updateTimeline);
+  updateTimeline(); // Initial call
+
+  // --- FAQ Collapsible Accordions ---
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
@@ -107,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
 
-      // Close all other items first
+      // Close all other panels
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove('active');
@@ -115,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Toggle current item
+      // Toggle current panel
       if (isOpen) {
         item.classList.remove('active');
         content.style.maxHeight = '0px';
@@ -126,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Modal Overlay CTA Setup ---
+  // --- Modal Popup Dialogs ---
   const modal = document.getElementById('audit-modal');
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
   const closeModalBtn = document.getElementById('modal-close');
@@ -134,35 +196,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openModal = () => {
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Disable page scrolling
+    document.body.style.overflow = 'hidden'; // Stop page scrolling
   };
 
   const closeModal = () => {
     modal.classList.remove('active');
-    document.body.style.overflow = ''; // Re-enable page scrolling
+    document.body.style.overflow = ''; // Resume scrolling
   };
 
   openModalBtns.forEach(btn => {
-    btn.addEventListener('click', openModal);
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
   });
 
   closeModalBtn.addEventListener('click', closeModal);
 
-  // Close modal when clicking outside the card
+  // Close when clicking gray backdrop
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       closeModal();
     }
   });
 
-  // Handle Escape key to close modal
+  // Close on Escape keypress
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
   });
 
-  // Form submission handler
+  // Modal form submit redirection simulation
   auditForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -170,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('audit-email').value;
     const website = document.getElementById('audit-website').value;
     
-    // Simulate successful audit submission
+    // Custom Success Card HTML Content Injection
     const cardContent = modal.querySelector('.modal-card');
     const originalHTML = cardContent.innerHTML;
     
@@ -178,27 +243,27 @@ document.addEventListener('DOMContentLoaded', () => {
       <button class="modal-close" id="modal-success-close" aria-label="Close modal"><i data-lucide="x" size="18"></i></button>
       <div style="text-align: center; padding: 20px 0; display: flex; flex-direction: column; align-items: center; gap: 16px;">
         <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(10, 132, 255, 0.1); border: 2px solid var(--accent-primary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); margin-bottom: 8px;">
-          <i data-lucide="check-circle" size="32"></i>
+          <i data-lucide="check-circle-2" size="32"></i>
         </div>
-        <h3 class="modal-title gradient-text" style="margin-bottom: 0;">Audit Requested!</h3>
-        <p class="modal-desc" style="margin-bottom: 0;">Thank you, ${name}. We've received your request for <strong>${website}</strong>.</p>
-        <p style="font-size: 0.9rem; color: var(--text-gray);">A detailed video audit report will be sent to <strong>${email}</strong> within 24 hours.</p>
-        <button class="btn btn-primary" id="success-close-btn" style="margin-top: 10px; width: 100%;">Got it, thanks!</button>
+        <h3 class="modal-title gradient-text" style="margin-bottom: 0;">Strategy Call Booked!</h3>
+        <p class="modal-desc" style="margin-bottom: 0;">Thank you, ${name}. We've received your details for <strong>${website}</strong>.</p>
+        <p style="font-size: 0.9rem; color: var(--text-gray);">A meeting link and confirmation have been dispatched to <strong>${email}</strong>.</p>
+        <button class="btn btn-primary" id="success-close-btn" style="margin-top: 10px; width: 100%;">Done</button>
       </div>
     `;
 
-    // Re-initialize icons inside modal
+    // Reinitialize icons in success card
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
 
-    // Success Close Hooks
+    // Success close logic
     const closeSuccess = () => {
       closeModal();
-      // Restore form layout for next open click
       setTimeout(() => {
         cardContent.innerHTML = originalHTML;
-        // Re-attach elements and form listener
+        
+        // Re-attach listeners to original elements
         const newCloseBtn = document.getElementById('modal-close');
         newCloseBtn.addEventListener('click', closeModal);
         
